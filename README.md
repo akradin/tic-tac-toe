@@ -24,10 +24,12 @@ JAVASCRIPT
   need function that checks gameboard to see if you have a winner
 AJAX
   set up auth
-  sign up
-  log in
-  change password
-  log out
+    ALREADY HAVE NAV BAR
+      need to add modals -----> change each part of nav bar (change password, log in, etc.) and set the data target from the nav bar and set it to modal
+      sign up
+      log in
+      change password
+      log out
 
 
 
