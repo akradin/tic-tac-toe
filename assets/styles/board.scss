@@ -2,9 +2,22 @@ body {
   color: red;
 }
 
+.row-centered {
+  text-align: center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    //reset the text-align
+    text-align:left;
+    //inline-block space fix
+    margin-right:-4px;
+}
+
 .box {
   position: relative;
-  width: 50%;
+  width: 20%;
   border-style: solid;
   border-color: black;
   border-width: 1px;
