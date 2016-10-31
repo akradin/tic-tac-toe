@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.row{
+  position: relative;
+  width: 80%
+}
+
+.row:before {
+  	display: block;
+  	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
