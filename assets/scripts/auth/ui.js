@@ -12,7 +12,6 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  debugger;
   store.user = data.user;
   success(data);
 };
