@@ -10,7 +10,11 @@
     </head>
     <body class="container-fluid">
 
-      <nav class="navbar navbar-default">
+
+
+            <!--Navbar starts here-->
+
+            <nav class="navbar navbar-default">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -24,14 +28,25 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+              </div>
+            </form>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up / Sign In <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Log In</a></li>
+                  <li>
+                    <a>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-form">
+                      Sign Up
+                    </button>
+                  </a>
+                </li>
+                  <li><a href="#">Sign In</a></li>
                   <li><a href="#">Change Password</a></li>
-                  <li><a href="#">Fuck Off :D</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="#">Log Out</a></li>
                 </ul>
@@ -40,6 +55,7 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
+      <!--NAVBAR ENDS-->
 
       <h1 class="header">Tic-Tac-Toe</h1>
 
