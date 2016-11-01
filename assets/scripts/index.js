@@ -5,6 +5,18 @@
 
 // use require without a reference to ensure a file is bundled
 
+const authEvents = require('./auth/events.js');
+
+$(() => {
+  authEvents.addHandlers();
+});
+
+
+
+
+
+
+
 let box_0 = document.getElementsByClassName("box-0")[0];
 
 let change_box_0 = function (){

@@ -6,8 +6,8 @@ const api = require('./api');
 const ui = require('./ui');
 
 const onSignUp = function (event) {
-  let data = getFormFields(this);
   event.preventDefault();
+  let data = getFormFields(this);
   api.signUp(data)
     .then(ui.success)
     .catch(ui.failure);
@@ -38,9 +38,9 @@ const onSignOut = function (event){
 
 
 const addHandlers = () => {
-  $('#sign-up').on('submit', onSignUp);
-  $('#sign-in').on('submit', onSignIn);
-  $('#change-password').on('submit', onChangePassword);
+  $('.sign-up-form').on('submit', onSignUp);
+  $('.sign-in-form').on('submit', onSignIn);
+  $('.change-password-form').on('submit', onChangePassword);
   $('#sign-out').on('submit', onSignOut);
 };
 

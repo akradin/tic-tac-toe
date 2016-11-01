@@ -1,7 +1,7 @@
 'use strict';
 
 const config = {
-  host: "http://localhost:7165",
+  host: "https://aqueous-atoll-85096.herokuapp.com",
 };
 
 module.exports = config;
