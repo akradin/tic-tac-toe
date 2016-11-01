@@ -1,7 +1,9 @@
 'use strict';
 
 
-let board = 8
+let board = []
+
+//only run if five plays have been made
 
 let game = function(){
     if(board[0] === board[1] && board[0] === board[2]){
@@ -31,12 +33,17 @@ let game = function(){
     else if (board[2]===board[4] && board[2] === board[6]) {
       return 1;
     }
-    // need to use the next bit of code to loop through array
-    // and check to see if all of the game spaces are occupied
-    // and if they are then it is a draw
-    // else {
-    //   }
-    // }
+    need to use the next bit of code to loop through array
+    and check to see if all of the game spaces are occupied
+    and if they are then it is a draw
+    else {
+      for (let i = 0; i < board.length; i++) {
+          if (board[i]==="")
+            return false;
+      }
+        return draw
+      }
+    }
 
 };
 

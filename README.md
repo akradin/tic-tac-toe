@@ -1,4 +1,3 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 ## Tasks
 
@@ -24,12 +23,10 @@ JAVASCRIPT
   need function that checks gameboard to see if you have a winner
 AJAX
   set up auth
-    ALREADY HAVE NAV BAR
-      need to add modals -----> change each part of nav bar (change password, log in, etc.) and set the data target from the nav bar and set it to modal
-      sign up
-      log in
-      change password
-      log out
+  sign up
+  log in
+  change password
+  log out
 
 
 
