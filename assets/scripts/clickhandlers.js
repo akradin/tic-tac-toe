@@ -1,25 +1,34 @@
 'use strict';
 
-let box_0 = document.getElementsByClassName("box-0")[0];
-let box_1 = document.getElementsByClassName("box-1")[0];
-let box_2 = document.getElementsByClassName("box-2")[0];
-let box_3 = document.getElementsByClassName("box-3")[0];
-let box_4 = document.getElementsByClassName("box-4")[0];
-let box_5 = document.getElementsByClassName("box-5")[0];
-let box_6 = document.getElementsByClassName("box-6")[0];
-let box_7 = document.getElementsByClassName("box-7")[0];
-let box_8 = document.getElementsByClassName("box-8")[0];
 
-let change_box = function (){
-    console.log('clicked')
+let player_switch = true;
+
+let player_turn = function(){
+  if(player_switch){
+    player_switch = false;
+  }
+  else{
+    player_switch = true;
+  }
 };
 
-box_0.addEventListener("click", change_box);
-box_1.addEventListener("click", change_box);
-box_2.addEventListener("click", change_box);
-box_3.addEventListener("click", change_box);
-box_4.addEventListener("click", change_box);
-box_5.addEventListener("click", change_box);
-box_6.addEventListener("click", change_box);
-box_7.addEventListener("click", change_box);
-box_8.addEventListener("click", change_box);
+let change_box= function(){
+  if(player_switch){
+    $(this).css('background-color','black');
+    player_turn();
+  }
+  else{
+    $(this).css('background-color','blue');
+    player_turn();
+  }
+};
+
+$('.box-0').one("click", change_box);
+$('.box-1').one("click", change_box);
+$('.box-2').one("click", change_box);
+$('.box-3').one("click", change_box);
+$('.box-4').one("click", change_box);
+$('.box-5').one("click", change_box);
+$('.box-6').one("click", change_box);
+$('.box-7').one("click", change_box);
+$('.box-8').one("click", change_box);
