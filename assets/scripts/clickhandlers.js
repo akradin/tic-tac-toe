@@ -1,5 +1,6 @@
 'use strict';
 const logic = require('./logic');
+const game_events = require('./game/game-events');
 
 
 let board = ['', '', '', '', '', '', '', '', ''];
@@ -65,8 +66,11 @@ let game_reset = function(){
 };
 
 
-$('button').on("click", game_reset);
+$('.reset').on("click", game_reset);
 
+$('.get-game').on("click", game_events.onGetIndex);
+$('.create-game').on("click", game_events.onCreateGame);
+$('.show-game').on("click", game_events.onShowGame);
 module.exports = {
   change_box,
 };
