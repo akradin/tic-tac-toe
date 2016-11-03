@@ -29,7 +29,7 @@ const signUp = (data) =>
 
   const signOut = () =>
   $.ajax({
-    url: config.host + '/sign-out/' + z,
+    url: config.host + '/sign-out/' + store.user.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token,
