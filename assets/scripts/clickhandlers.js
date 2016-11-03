@@ -37,7 +37,6 @@ let change_box= function(){
       $(this).css('background-color','blue');
       $(this).text('Y');
       player_turn();
-      debugger;
     }
   }
   check_game();
@@ -57,7 +56,17 @@ $('.box-6').on("click", change_box);
 $('.box-7').on("click", change_box);
 $('.box-8').on("click", change_box);
 
-$('button').on("click", reset.game_reset);
+
+let game_reset = function(){
+  player_switch = 'x';
+  board = ['', '', '', '', '', '', '', '', ''];
+  $('.content').text('');
+  $('.content').css('background-color', 'white');
+  // console.log("clickhandlers.player_switch is " + clickhandlers.player_switch);
+};
+
+
+$('button').on("click", game_reset);
 
 
 

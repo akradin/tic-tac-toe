@@ -3,6 +3,7 @@
 const clickhandlers = require('./clickhandlers');
 
 let game_reset = function(){
+  debugger;
   clickhandlers.player_switch = 'x';
   clickhandlers.board = ['', '', '', '', '', '', '', '', ''];
   $('.content').text('');
