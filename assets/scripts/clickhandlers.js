@@ -3,6 +3,11 @@ const logic = require('./logic');
 
 let board = ['', '', '', '', '', '', '', '', ''];
 
+let x = function(){
+  x = logic.y * 2;
+  console.log(x);
+};
+
 let player_switch = 'x';
 
 let player_turn = function(){
@@ -41,7 +46,7 @@ let change_box= function(){
   }
   check_game();
 
-  logic.check_win(board);
+  //logic.check_win(board);
 };
 
 
@@ -55,30 +60,7 @@ $('.box-6').one("click", change_box);
 $('.box-7').one("click", change_box);
 $('.box-8').one("click", change_box);
 
-// $('.box-0').one("click", check_game);
-// $('.box-1').one("click", check_game);
-// $('.box-2').one("click", check_game);
-// $('.box-3').one("click", check_game);
-// $('.box-4').one("click", check_game);
-// $('.box-5').one("click", check_game);
-// $('.box-6').one("click", check_game);
-// $('.box-7').one("click", check_game);
-// $('.box-8').one("click", check_game);
 
+module.exports = {
 
-
-
-
-// let check_game = function(){
-//   if ($('.content').is(':empty')){
-//     $('.content').replaceWith(' ');
-//   }
-//     let game_board = $('.content').select().text();
-//     console.log(game_board);
-    // if (game_board.length > 5){
-    //   check_win();
-    // }
-
-//};
-
-//check_game();
+}
