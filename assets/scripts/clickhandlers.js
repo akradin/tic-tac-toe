@@ -1,6 +1,5 @@
 'use strict';
 const logic = require('./logic');
-const reset = require('./reset');
 
 
 let board = ['', '', '', '', '', '', '', '', ''];
@@ -67,8 +66,6 @@ let game_reset = function(){
 
 
 $('button').on("click", game_reset);
-
-
 
 module.exports = {
   change_box,
