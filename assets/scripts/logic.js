@@ -4,33 +4,33 @@ const clickhandlers = require('./clickhandlers');
 //only run if five plays have been made
 
 
-let check_win = function(){
+let check_win = function(board){
     if(clickhandlers.board[0] === clickhandlers.board[1] && clickhandlers.board[0] === clickhandlers.board[2]){
-      return 1;
+      console.log('win');
     }
     else if (clickhandlers.board[3]===clickhandlers.board[4] && clickhandlers.board[3] === clickhandlers.board[5]) {
-      return 1;
+      console.log('win');
     }
     else if (clickhandlers.board[6]===clickhandlers.board[7] && clickhandlers.board[6] === clickhandlers.board[8]){
-      return 1;
+      console.log('win');
     }
 
     else if (clickhandlers.board[0]===clickhandlers.board[3] && clickhandlers.board[0] === clickhandlers.board[6]) {
-      return 1;
+      console.log('win');
     }
     else if (clickhandlers.board[1]===clickhandlers.board[4] && clickhandlers.board[1] === clickhandlers.board[7]) {
-      return 1;
+      console.log('win');
     }
 
     else if (clickhandlers.board[2]===clickhandlers.board[5] && clickhandlers.board[2] === clickhandlers.board[8]) {
-      return 1;
+      console.log('win');
     }
 
     else if (clickhandlers.board[0]===clickhandlers.board[4] && clickhandlers.board[0] === clickhandlers.board[8]) {
-      return 1;
+      console.log('win');
     }
     else if (clickhandlers.board[2]===clickhandlers.board[4] && clickhandlers.board[2] === clickhandlers.board[6]) {
-      return 1;
+      console.log('win');
     }
     // need to use the next bit of code to loop through array
     // and check to see if all of the game spaces are occupied
@@ -40,7 +40,7 @@ let check_win = function(){
           if (clickhandlers.board[i]===""){
             return false;
       }
-        return 'draw';
+        console.log('draw');
       }
     }
   };

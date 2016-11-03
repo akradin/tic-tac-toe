@@ -15,5 +15,4 @@ $(() => {
 
 require('./example');
 require('./clickhandlers');
-require('./globals.js');
-//require('./logic');
+require('./logic');

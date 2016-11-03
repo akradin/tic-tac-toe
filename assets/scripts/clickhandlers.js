@@ -1,6 +1,8 @@
 'use strict';
 const logic = require('./logic');
 
+let board = ['', '', '', '', '', '', '', '', ''];
+
 let player_switch = 'x';
 
 let player_turn = function(){
@@ -11,6 +13,18 @@ let player_turn = function(){
     player_switch = 'x';
   }
 };
+
+let check_game = function(){
+  $.each($('.content'), function(index, value){
+    let new_text = $(value).text();
+    let i = index;
+    board.splice(i, 1, new_text);
+    console.log(board);
+
+
+  });
+};
+
 
 let change_box= function(){
   if(player_switch==='x'){
@@ -25,16 +39,11 @@ let change_box= function(){
     player_turn();
     console.log('y');
   }
+  check_game();
+
+  logic.check_win(board);
 };
 
-let check_game = function(){
-  let board = [];
-  $.each($('.content'),function(index, value){
-    board.push(value);
-    console.log(board);
-
-});
-};
 
 $('.box-0').one("click", change_box);
 $('.box-1').one("click", change_box);
@@ -46,15 +55,15 @@ $('.box-6').one("click", change_box);
 $('.box-7').one("click", change_box);
 $('.box-8').one("click", change_box);
 
-$('.box-0').one("click", check_game);
-$('.box-1').one("click", check_game);
-$('.box-2').one("click", check_game);
-$('.box-3').one("click", check_game);
-$('.box-4').one("click", check_game);
-$('.box-5').one("click", check_game);
-$('.box-6').one("click", check_game);
-$('.box-7').one("click", check_game);
-$('.box-8').one("click", check_game);
+// $('.box-0').one("click", check_game);
+// $('.box-1').one("click", check_game);
+// $('.box-2').one("click", check_game);
+// $('.box-3').one("click", check_game);
+// $('.box-4').one("click", check_game);
+// $('.box-5').one("click", check_game);
+// $('.box-6').one("click", check_game);
+// $('.box-7').one("click", check_game);
+// $('.box-8').one("click", check_game);
 
 
 
