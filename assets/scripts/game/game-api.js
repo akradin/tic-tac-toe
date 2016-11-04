@@ -27,7 +27,7 @@ const getIndex = function(){
 
  const showGame = function(){
    return $.ajax ({
-     url: config.host + '/games/',
+     url: config.host + '/games/' + store.id,
      method: 'GET',
      headers: {
        Authorization: 'Token token=' + store.user.token,

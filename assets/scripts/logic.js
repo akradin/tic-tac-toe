@@ -2,7 +2,6 @@
 
 const clickhandlers = require('./clickhandlers');
 const reset = require('./reset');
-//only run if five plays have been made
 
 let check_win = function(board){
   if(board[0] !== '' && board[0] === board[1] && board[0] === board[2]){
@@ -45,7 +44,7 @@ let check_win = function(board){
       return true;
     }
     else{
-      console.log('nothing')
+      return false;
     }
   };
 
