@@ -41,3 +41,19 @@ body {
   text-align: center;
 
 }
+
+p {
+  color: $black;
+  text-align: center;
+}
+
+li {
+  color: $black;
+  list-style-type: none;
+  text-align: center;
+}
+
+.all-buttons {
+  margin: 0 auto;
+  text-align: center;
+}

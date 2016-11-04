@@ -1,3 +1,42 @@
+WEBSITE LINK: https://akradin.github.io/tic-tac-toe/
+
+
+Technologies used: mainly the assistance of my peers in combination with stackoverflow
+  and various other websites such as bootstrap and miscellanious online tutorials about
+  how to tidy up CSS.
+
+Planning was very much done at a very rudimentary level. See tasks below. I references these
+  loosely but mainly kept a mental check list of what should be done. Meeting requirements quickly
+  took precedene above all else and I worked in a methodical fashion to get a website that displayed
+  something. The site originally displayed the gameboard and a nav bar with buttons for various authorizations
+  Next, I worked on making the authorizations work. This meant functioning sign in/up, changing of password
+  and signing out.
+  Following this I focused on making the board clickable and slowly added in functionality so clicks would
+  represet something in the game. First I changed background color, then text.
+  Next I made it so the text input into each game cell formed an array
+  This helped me create game logic which took the bulk of the time
+  Once my game logic was finished, I began working on API calls to the game would work in the back end
+  I then focused diligently on the requirements and ensure that all features of the site worked properly.
+
+Unsolved problems were not achieving lofty goals and fully understanding my code. For the former, I wanted to have
+  functionality where logging in or signing up would pop up immediately upon reaching the site. Along with that, I
+  wanted a complete game to have an alert that informed the user of completion along with links to share to social media.
+  Lastly, I wanted hover functionality so the board cell would highlite upon hovering mouse
+
+  I was also in a time crunch to finish game API calls so for the update function I leaned heavily on my peers to resolve this
+  problem. I need to go back and look at this code to fully understand what is happening
+
+For my wireframes, see attached images folder
+
+User Stories
+As a user I want a clear and concise sign up and login
+As a user I want to be able to start a game easily
+As a user I want easy to use functionality
+As a user I want to be able to play on multiple devices
+
+
+
+
 
 ## Tasks
 

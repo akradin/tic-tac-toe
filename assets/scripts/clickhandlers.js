@@ -2,6 +2,8 @@
 const logic = require('./logic');
 const game_events = require('./game/game-events');
 
+$('.game-board').hide();
+
 
 let board = ['', '', '', '', '', '', '', '', ''];
 
@@ -26,8 +28,10 @@ let check_game = function(){
 
 
 let change_box= function(){
-
+  $('.game-data').text('');
   if($(this).text()===''){
+    let index = $('.content').index($(this));
+    let value = '';
     if(player_switch==='x'){
       $(this).css('background-color','black');
       $(this).text('X');
@@ -38,23 +42,15 @@ let change_box= function(){
       $(this).text('Y');
       player_turn();
     }
+    value = $(this).text();
+    check_game();
+    let over = logic.check_win(board);
+    game_events.onUpdateGame(index, value, over);
   }
-  check_game();
-  console.log(board);
 
-  logic.check_win(board);
 };
 
-
-$('.box-0').on("click", change_box);
-$('.box-1').on("click", change_box);
-$('.box-2').on("click", change_box);
-$('.box-3').on("click", change_box);
-$('.box-4').on("click", change_box);
-$('.box-5').on("click", change_box);
-$('.box-6').on("click", change_box);
-$('.box-7').on("click", change_box);
-$('.box-8').on("click", change_box);
+$('.content').on("click", change_box);
 
 
 let game_reset = function(){
@@ -62,15 +58,23 @@ let game_reset = function(){
   board = ['', '', '', '', '', '', '', '', ''];
   $('.content').text('');
   $('.content').css('background-color', 'white');
-  // console.log("clickhandlers.player_switch is " + clickhandlers.player_switch);
+  $('.win').text('');
 };
-
 
 $('.reset').on("click", game_reset);
 
+let show_board = function(){
+  $('.game-board').show();
+};
+
 $('.get-game').on("click", game_events.onGetIndex);
 $('.create-game').on("click", game_events.onCreateGame);
+$('.create-game').on("click", show_board);
 $('.show-game').on("click", game_events.onShowGame);
+$('.update-game').on("click", game_events.onUpdateGame);
+
+
 module.exports = {
   change_box,
+  board,
 };
