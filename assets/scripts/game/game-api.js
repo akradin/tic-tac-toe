@@ -35,9 +35,29 @@ const getIndex = function(){
    });
  };
 
+const updateGame = function(index, value, over){
+  return $.ajax({
+    url: config.host + '/games/' + store.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+    data: {
+      "game": {
+        "cell": {
+          "index": index,
+          "value": value,
+          },
+        "over": over,
+        }
+    }
+  });
+};
+
 module.exports = {
   getIndex,
   createGame,
   showGame,
+  updateGame,
 
 };
