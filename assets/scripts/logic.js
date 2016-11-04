@@ -40,7 +40,7 @@ let check_win = function(board){
       return true;
     }
     else if(board.indexOf('') < 0){
-      ('.win').text('Tie Game!');
+      $('.win').text('Tie Game!');
       return true;
     }
     else{

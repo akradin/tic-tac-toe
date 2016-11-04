@@ -368,7 +368,7 @@ webpackJsonp([0],[
 	    $('.win').text(board[2] + ' won!');
 	    return true;
 	  } else if (board.indexOf('') < 0) {
-	    '.win'.text('Tie Game!');
+	    $('.win').text('Tie Game!');
 	    return true;
 	  } else {
 	    return false;
