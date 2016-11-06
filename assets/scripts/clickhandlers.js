@@ -61,7 +61,7 @@ let game_reset = function(){
   $('.win').text('');
 };
 
-$('.reset').on("click", game_reset);
+//$('.reset').on("click", game_reset);
 
 let show_board = function(){
   $('.game-board').show();
@@ -70,6 +70,7 @@ let show_board = function(){
 $('.get-game').on("click", game_events.onGetIndex);
 $('.create-game').on("click", game_events.onCreateGame);
 $('.create-game').on("click", show_board);
+$('.create-game').on("click", game_reset);
 $('.show-game').on("click", game_events.onShowGame);
 $('.update-game').on("click", game_events.onUpdateGame);
 
