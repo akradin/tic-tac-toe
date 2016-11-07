@@ -315,7 +315,7 @@ webpackJsonp([0],[
 	  $('.win').text('');
 	};
 
-	$('.reset').on("click", game_reset);
+	//$('.reset').on("click", game_reset);
 
 	var show_board = function show_board() {
 	  $('.game-board').show();
@@ -324,6 +324,7 @@ webpackJsonp([0],[
 	$('.get-game').on("click", game_events.onGetIndex);
 	$('.create-game').on("click", game_events.onCreateGame);
 	$('.create-game').on("click", show_board);
+	$('.create-game').on("click", game_reset);
 	$('.show-game').on("click", game_events.onShowGame);
 	$('.update-game').on("click", game_events.onUpdateGame);
 
@@ -344,31 +345,39 @@ webpackJsonp([0],[
 
 	var check_win = function check_win(board) {
 	  if (board[0] !== '' && board[0] === board[1] && board[0] === board[2]) {
-	    $('.win').text(board[0] + ' won!');
+	    $('.win').text(board[0] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[3] !== '' && board[3] === board[4] && board[3] === board[5]) {
-	    $('.win').text(board[3] + ' won!');
+	    $('.win').text(board[3] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[6] !== '' && board[6] === board[7] && board[6] === board[8]) {
-	    $('.win').text(board[6] + ' won!');
+	    $('.win').text(board[6] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[0] !== '' && board[0] === board[3] && board[0] === board[6]) {
-	    $('.win').text(board[0] + ' won!');
+	    $('.win').text(board[0] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[1] !== '' && board[1] === board[4] && board[1] === board[7]) {
-	    $('.win').text(board[1] + ' won!');
+	    $('.win').text(board[1] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[2] !== '' && board[2] === board[5] && board[2] === board[8]) {
-	    $('.win').text(board[2] + ' won!');
+	    $('.win').text(board[2] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[0] !== '' && board[0] === board[4] && board[0] === board[8]) {
-	    $('.win').text(board[0] + ' won!');
+	    $('.win').text(board[0] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board[2] !== '' && board[2] === board[4] && board[2] === board[6]) {
-	    $('.win').text(board[2] + ' won!');
+	    $('.win').text(board[2] + ' won! Click create game to start a new round!');
+	    $('.container').hide();
 	    return true;
 	  } else if (board.indexOf('') < 0) {
-	    $('.win').text('Tie Game!');
+	    $('.win').text('Tie Game! Click create game to start a new round!');
 	    return true;
 	  } else {
 	    return false;
