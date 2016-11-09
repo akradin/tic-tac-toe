@@ -74,6 +74,8 @@ webpackJsonp([0],[
 	var onSignOut = function onSignOut(event) {
 	  event.preventDefault();
 	  api.signOut().then(ui.success).catch(ui.failure);
+	  $('.create-game').hide();
+	  $('.get-game').hide();
 	};
 
 	var addHandlers = function addHandlers() {
@@ -227,13 +229,16 @@ webpackJsonp([0],[
 
 	var store = {};
 
-	module.exports = store;
+	module.exports = {
+	  store: store
+
+	};
 
 /***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var store = __webpack_require__(7);
 
@@ -244,6 +249,8 @@ webpackJsonp([0],[
 	var signInSuccess = function signInSuccess(data) {
 	  store.user = data.user;
 	  success(data);
+	  $('.create-game').show();
+	  $('.get-game').show();
 	};
 
 	module.exports = {
@@ -251,6 +258,7 @@ webpackJsonp([0],[
 	  success: success,
 	  signInSuccess: signInSuccess
 	};
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
 /* 9 */,
@@ -325,8 +333,28 @@ webpackJsonp([0],[
 	$('.create-game').on("click", game_events.onCreateGame);
 	$('.create-game').on("click", show_board);
 	$('.create-game').on("click", game_reset);
+	$('.create-game').hide();
+	$('.get-game').hide();
 	$('.show-game').on("click", game_events.onShowGame);
 	$('.update-game').on("click", game_events.onUpdateGame);
+
+	// hide modals on submit
+
+	$('#sign-up-submit').click(function () {
+	  $('#sign-up-form').modal('hide');
+	});
+
+	$('#sign-in-submit').click(function () {
+	  $('#sign-in-form').modal('hide');
+	});
+
+	$('#change-pw-submit').click(function () {
+	  $('#change-password-form').modal('hide');
+	});
+
+	$('#sign-out').click(function () {
+	  $('#log-out').modal('hide');
+	});
 
 	module.exports = {
 	  change_box: change_box,
