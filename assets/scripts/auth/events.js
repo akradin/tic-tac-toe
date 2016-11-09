@@ -34,6 +34,8 @@ const onSignOut = function (event){
     api.signOut()
       .then(ui.success)
       .catch(ui.failure);
+    $('.create-game').hide();
+    $('.get-game').hide();
 };
 
 
