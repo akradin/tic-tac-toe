@@ -3,6 +3,7 @@
 const store = require('../store');
 const config = require('../config');
 
+
 const getIndex = function(){
   return $.ajax({
     url: config.host + '/games',
