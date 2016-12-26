@@ -77,23 +77,6 @@ $('.show-game').on("click", game_events.onShowGame);
 $('.update-game').on("click", game_events.onUpdateGame);
 
 
-// hide modals on submit
-
-$('#sign-up-submit').click(function() {
-   $('#sign-up-form').modal('hide');
-});
-
-$('#sign-in-submit').click(function() {
-   $('#sign-in-form').modal('hide');
-});
-
-$('#change-pw-submit').click(function() {
-   $('#change-password-form').modal('hide');
-});
-
-$('#sign-out').click(function() {
-   $('#log-out').modal('hide');
-});
 
 
 

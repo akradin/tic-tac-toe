@@ -17,6 +17,7 @@ const index_success = function(data){
 const create_success = function(data){
   store.id = data.game.id;
   $('.game-data').text('Game created!');
+  $('.instructions').hide();
 
 };
 

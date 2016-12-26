@@ -1,11 +1,20 @@
 
 
 body {
-  color: $red;
+  background-color: $graygreen;
+  color: $white;
+}
+
+.instructions {
+  color: $white;
 }
 
 .header {
   text-align: center;
+}
+
+.navbar {
+  background-color: $navy
 }
 
 .row-centered {
@@ -23,7 +32,7 @@ body {
   border-style: solid;
   border-width: 1px;
   position: relative;
-  width: 28%;
+  width: 23%;
 }
 
 .box::before {
@@ -56,4 +65,13 @@ li {
 .all-buttons {
   margin: 0 auto;
   text-align: center;
+}
+
+
+#sign-up-form,
+#sign-in-form,
+#change-password-form,
+#log-out-form,
+#welcome-modal{
+  color: $black;
 }
