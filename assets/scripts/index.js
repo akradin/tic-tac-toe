@@ -9,7 +9,6 @@ const authEvents = require('./auth/events.js');
 
 $(() => {
   authEvents.addHandlers();
-  $('#welcome-modal').modal('show');
   $('#welcome-modal').modal({
     keyboard: false,
     backdrop: 'static'

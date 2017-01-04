@@ -33,13 +33,15 @@ let change_box= function(){
     let index = $('.content').index($(this));
     let value = '';
     if(player_switch==='x'){
-      $(this).css('background-color','black');
+      // $(this).css('background-color','black');
       $(this).text('X');
+      $(this).addClass('no-hover');
       player_turn();
     }
     else  {
-      $(this).css('background-color','blue');
+      // $(this).css('background-color','blue');
       $(this).text('Y');
+      $(this).addClass('no-hover');
       player_turn();
     }
     value = $(this).text();
@@ -59,6 +61,7 @@ let game_reset = function(){
   $('.content').text('');
   $('.content').css('background-color', 'white');
   $('.win').text('');
+  $('.content').removeClass('no-hover');
 };
 
 //$('.reset').on("click", game_reset);

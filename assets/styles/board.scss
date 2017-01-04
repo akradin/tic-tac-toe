@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-  background-color: $navy
+  background-color: $navy;
 }
 
 .row-centered {
@@ -42,14 +42,22 @@ body {
 }
 
 .content {
+  background-color: $tealish !important;
+  bottom: 0;
+  font-size: 30px;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
   text-align: center;
 
 }
+
+.content:not(.no-hover):hover {
+  background-color: $blueish;
+  opacity: .5;
+}
+
 
 p {
   color: $black;
@@ -64,6 +72,7 @@ li {
 
 .all-buttons {
   margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -72,6 +81,6 @@ li {
 #sign-in-form,
 #change-password-form,
 #log-out-form,
-#welcome-modal{
+#welcome-modal {
   color: $black;
 }
