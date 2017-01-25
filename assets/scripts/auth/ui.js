@@ -38,7 +38,10 @@ const signOutSuccess = () => {
   $('.game-data').hide();
   $('.win').hide();
   $('.sign-up-button').show();
-$('.sign-in-button').show();
+  $('.sign-in-button').show();
+  $('.change-pw-button').hide();
+  $('.log-out-button').hide();
+  $('.dropdown-toggle').text('Sign Up / Sign In');
 
   };
 
